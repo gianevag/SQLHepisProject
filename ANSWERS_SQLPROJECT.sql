@@ -6,12 +6,12 @@ SELECT cl_fname,cl_sname,cl_afm
 FROM (Client JOIN Municipality ON cl_mun=mun_id) JOIN Prefecture ON pref_id=mun_pref
 WHERE pref_name='ΑΤΤΙΚΗΣ'
 
-/*ΕΡΩΤΗΜΑ 2_1*/
+/*ΕΡΩΤΗΜΑ 2*/
 SELECT cl_fname,cl_sname,cl_afm
 FROM (Client JOIN Municipality ON cl_mun=mun_id) JOIN Prefecture ON pref_id=mun_pref
 WHERE pref_name !='ΑΤΤΙΚΗΣ' OR mun_name='ΑΘΗΝΩΝ'
 
-/*ΕΡΩΤΗΜΑ 3_1*/
+/*ΕΡΩΤΗΜΑ 3*/
 SELECT emp_fname,emp_sname,emp_salary
 FROM Employee
 WHERE datepart(YY,emp_datetime)>=05 AND datepart(MM,emp_datetime)>=01 AND datepart(DD,emp_datetime)>=01 AND emp_isContractor != 0
